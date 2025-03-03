@@ -1,0 +1,511 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #e0e7ff); /* Subtle gradient background */
+  color: #f9f5f5;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px; /* Limit the maximum width for very large screens */
+  margin: 0 auto; /* Center the content */
+}
+
+/* Header */
+/* Header */
+.header {
+  background: linear-gradient(135deg, #080110, #0d5ce4); /* Gradient background */
+  color: white;
+  padding: 20px 29px; /* Increased right and left padding */
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Ensure it takes full width */
+  max-width: 1200px; /* Optional: Set a max-width for a more controlled look */
+  margin-right: auto; /* Centering */
+  margin-left: auto; /* Centering */
+}
+
+
+.header:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Home Page */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.create-room-section, .room-list {
+  background: rgb(75, 48, 181);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Take full width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-room-section:hover, .room-list:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.create-room-section input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.create-room-section input:focus {
+  border-color: #6a11cb; /* Purple */
+  outline: none;
+}
+
+.create-room-section button, .room-list button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+}
+
+.create-room-section button:hover, .room-list button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Room List */
+.room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap for better spacing */
+}
+
+.room-card {
+  background: rgb(34, 36, 62);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.room-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #faf6f6;
+}
+
+.room-card .room-actions {
+  display: flex;
+  gap: 10px; /* Spacing between icons */
+}
+
+.room-card .room-actions button {
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 50%; /* Circular buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; /* Fixed size */
+  height: 36px; /* Fixed size */
+}
+
+.room-card .room-actions button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light hover effect */
+  transform: scale(1.1);
+}
+
+.room-card .room-actions button svg {
+  width: 18px; /* Icon size */
+  height: 18px; /* Icon size */
+  fill: #6a11cb; /* Icon color */
+}
+
+/* Room Page */
+.room-page {
+  background: rgb(4, 6, 32);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Take full width */
+  max-width: 1200px; /* Limit maximum width for very large screens */
+  margin: 0 auto; /* Center the content */
+  animation: fadeIn 0.5s ease; /* Page transition animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.room-header button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-header button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Type Selector */
+.input-type-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-type-selector button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-type-selector button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Input Section */
+.text-input-section textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.text-input-section textarea:focus {
+  border-color: #6a11cb; /* Purple */
+  outline: none;
+}
+
+/* Emoji Selector */
+.emoji-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.emoji-selector span {
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.2s ease;
+}
+
+.emoji-selector span:hover {
+  transform: scale(1.2);
+}
+
+/* Voice Input Section */
+.voice-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.voice-input-section button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Asymmetrical Shapes for Cards */
+.create-room-section, .room-list, .room-card, .comment {
+  border-radius: 15px 0 15px 0; /* Top-left and bottom-right rounded */
+}
+
+/* Asymmetrical Shapes for Buttons */
+.create-room-section button, .room-list button, .room-header button, .post-button, .input-type-selector button {
+  border-radius: 25px 0 25px 0; /* Top-left and bottom-right rounded */
+}
+
+/* Animated Gradient for Buttons */
+.create-room-section button, .room-list button, .room-header button, .post-button, .input-type-selector button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc, #6a11cb);
+  background-size: 200% 200%;
+  animation: gradientAnimation 3s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Gradient Border for Cards */
+.create-room-section, .room-list, .room-card, .comment {
+  border: 2px solid transparent;
+  background: linear-gradient(#1a1a2e, #06064a) padding-box,
+              linear-gradient(135deg, #6a11cb, #2575fc) border-box;
+  border-radius: 15px 0 15px 0; /* Asymmetrical border radius */
+}
+
+.voice-input-section button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Post Button */
+.post-button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.post-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Thread Section */
+.thread {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap for better spacing */
+}
+
+.comment {
+  background: rgb(216, 224, 230);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.comment p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.comment-emoji {
+  font-size: 24px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #666;
+}
+
+.comment .comment-actions {
+  display: flex;
+  gap: 10px; /* Spacing between icons */
+}
+
+.comment .comment-actions button {
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 50%; /* Circular buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; /* Fixed size */
+  height: 36px; /* Fixed size */
+}
+.comment p {
+  margin: 0;
+  font-size: 16px;
+  color: black; /* Set text color to black */
+}
+
+
+.comment .comment-actions button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light hover effect */
+  transform: scale(1.1);
+}
+
+.comment .comment-actions button svg {
+  width: 18px; /* Icon size */
+  height: 18px; /* Icon size */
+  fill: #6a11cb; /* Icon color */
+}
+.create-room-section ,.room-list,.room-card{
+  border: 2px solid transparent;
+  background: linear-gradient(#1a1a2e, #1a1a2e) padding-box,
+              linear-gradient(135deg, #6a11cb, #2575fc) border-box;
+  border-radius: 15px 0 15px 0; /* Asymmetrical border radius */
+}
+
+
+/* Modern Typography */
+body {
+  font-family: 'Poppins', sans-serif; /* Use a modern font */
+}
+
+h1, h2, h3 {
+  font-weight: 600; /* Bold headings */
+}
+
+p {
+  font-weight: 400; /* Regular body text */
+}
+/* Icon Styling */
+.room-actions button svg, .comment-actions button svg {
+  width: 20px;
+  height: 20px;
+  fill: #6a11cb;
+  transition: fill 0.3s ease;
+}
+
+.room-actions button:hover svg, .comment-actions button:hover svg {
+  fill: #2575fc;
+}
+
+.comment{
+  background-color: white; /* White background for room card */
+  border: 2px solid transparent; /* Maintain transparent border for room-card */
+  background: linear-gradient(#f1f1f2, #66666d) padding-box,
+              linear-gradient(135deg, #6a11cb, #2575fc) border-box;
+  border-radius: 15px 0 15px 0; /* Asymmetrical border radius */
+}
+
+
+
+
+
+/* Hover Animation for Buttons */
+.create-room-section button:hover, .room-list button:hover, .room-header button:hover, .post-button:hover, .input-type-selector button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Animation for Cards */
+.create-room-section:hover, .room-list:hover, .room-card:hover, .comment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #8f8c93, #2575fc);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+/* Dynamic Gradient Background */
+body {
+  background: linear-gradient(-45deg, #3e4a89, #2a3a63, #1f1f33, #5a5e79);
+  background-size: 400% 400%;
+  animation: gradientBackground 10s ease infinite;
+}
+
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-room-section, .room-list, .room-page {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .input-type-selector {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+
+  .room-card, .comment {
+    flex-direction: column; /* Stack content vertically on small screens */
+    align-items: flex-start;
+  }
+
+  .room-actions, .comment-actions {
+    margin-top: 10px; /* Add spacing for stacked actions */
+  }
+}
