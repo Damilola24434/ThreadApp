@@ -232,7 +232,7 @@ function App() {
                 placeholder="Record your moment..."
               />
               <div className="emoji-selector">
-                {['😊', '😢', '😡', '😍', '😎'].map((em) => (
+                {['😊', '😢', '😡', '😍', '😎', '😂', '🥰', '😜', '😅', '😏','😐', '🤓'].map((em) => (
                   <span key={em} onClick={() => setEmoji(em)}>
                     {em}
                   </span>
@@ -247,7 +247,7 @@ function App() {
               <button onClick={handleStopRecording} disabled={!isRecording}>Stop Recording</button>
               {recordedAudio && <audio controls src={recordedAudio} />}
               <div className="emoji-selector">
-                {['😊', '😢', '😡', '😍', '😎'].map((em) => (
+                {['😊', '😢', '😡', '😍', '😎', '😂', '🥰', '😜', '😅', '😏','😐', '🤓'].map((em) => (
                   <span key={em} onClick={() => setEmoji(em)}>
                     {em}
                   </span>
@@ -262,37 +262,39 @@ function App() {
             </button>
           )}
 
-          <div className="thread">
-            {currentRoom.comments.map((comment) => (
-              <div key={comment.id} className="comment">
-                {comment.type === 'text' ? (
-                  editingCommentId === comment.id ? ( // Check if this comment is being edited
-                    <input
-                      type="text"
-                      value={editText}
-                      onChange={(e) => setEditText(e.target.value)}
-                      onBlur={() => handleSaveEdit(comment.id)} // Save on blur
-                      autoFocus
-                    />
-                  ) : (
-                    <p>{comment.content}</p>
-                  )
-                ) : (
-                  <audio controls src={comment.content} />
-                )}
-                {comment.emoji && <span className="comment-emoji">{comment.emoji}</span>}
-                <p className="timestamp">{comment.timestamp}</p>
-                <div className="comment-actions">
-                  <button className="edit-button" onClick={() => handleEditComment(comment.id)}>
-                    <FaEdit /> {/* Edit icon */}
-                  </button>
-                  <button className="delete-button" onClick={() => handleDeleteComment(comment.id)}>
-                    <FaTrash /> {/* Delete icon */}
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
+<div className="thread">
+  {currentRoom.comments.map((comment) => (
+    <div key={comment.id} className="comment">
+      {comment.type === 'text' ? (
+        editingCommentId === comment.id ? ( // Check if this comment is being edited
+          <input
+            type="text"
+            value={editText}
+            onChange={(e) => setEditText(e.target.value)}
+            onBlur={() => handleSaveEdit(comment.id)} // Save on blur
+            autoFocus
+          />
+        ) : (
+          <p>{comment.content}</p>
+        )
+      ) : (
+        <audio controls src={comment.content} />
+      )}
+      {comment.emoji && <span className="comment-emoji">{comment.emoji}</span>}
+      <p className="timestamp">{comment.timestamp}</p>
+      <div className="comment-actions">
+        {comment.type === 'text' && ( // Only show edit button for text comments
+          <button className="edit-button" onClick={() => handleEditComment(comment.id)}>
+            <FaEdit /> {/* Edit icon */}
+          </button>
+        )}
+        <button className="delete-button" onClick={() => handleDeleteComment(comment.id)}>
+          <FaTrash /> {/* Delete icon */}
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       )}
     </div>
