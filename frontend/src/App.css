@@ -476,7 +476,33 @@ body {
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
 }
+/* Header */
+.header {
+  background: linear-gradient(135deg, #080110, #0d5ce4); /* Gradient background */
+  color: white;
+  padding: 15px 20px; /* Adjust padding */
+  border-radius: 15px; /* Rounded corners */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Ensure it takes full width */
+  max-width: 100%; /* Prevent overflow */
+  box-sizing: border-box; /* Include padding in width calculation */
+  margin-right: auto; /* Centering */
+  margin-left: auto; /* Centering */
+  text-align: center; /* Center text */
+}
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px; /* Reduce padding for mobile */
+    border-radius: 15px; /* Keep rounded corners */
+    margin-left: 10px; /* Add small margin to prevent touching screen edges */
+    margin-right: 10px; /* Add small margin to prevent touching screen edges */
+    width: calc(100% - 10px); /* Adjust width to account for margins */
+  }
+}
 
 @keyframes gradientBackground {
   0% {

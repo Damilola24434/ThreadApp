@@ -232,7 +232,7 @@ function App() {
                 placeholder="Record your moment..."
               />
               <div className="emoji-selector">
-                {['😊', '😢', '😡', '😍', '😎', '😂', '🥰', '😜', '😅', '😏','😐', '🤓'].map((em) => (
+                {['😊', '😢', '😡', '😍', '😎', '😂', '🥰', '😐', '🤓'].map((em) => (
                   <span key={em} onClick={() => setEmoji(em)}>
                     {em}
                   </span>
@@ -247,7 +247,7 @@ function App() {
               <button onClick={handleStopRecording} disabled={!isRecording}>Stop Recording</button>
               {recordedAudio && <audio controls src={recordedAudio} />}
               <div className="emoji-selector">
-                {['😊', '😢', '😡', '😍', '😎', '😂', '🥰', '😜', '😅', '😏','😐', '🤓'].map((em) => (
+                {['😊', '😢', '😡', '😍', '😎', '😂', '🥰','😐', '🤓'].map((em) => (
                   <span key={em} onClick={() => setEmoji(em)}>
                     {em}
                   </span>
