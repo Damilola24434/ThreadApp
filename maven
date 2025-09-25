@@ -1,0 +1,9 @@
+# if repo is already cloned
+cd ThreadApp
+
+# create the Maven project skeleton
+mvn archetype:generate \
+  -DgroupId=com.example \
+  -DartifactId=my-maven-app \
+  -DarchetypeArtifactId=maven-archetype-quickstart \
+  -DinteractiveMode=false
